@@ -70,7 +70,6 @@ public class WalletFundCommand extends WalletManager implements Runnable {
 
     @Override
     public void run() {
-
         try {
             Faucet selectedFaucet = Faucet.valueOf(network.toUpperCase());
 
@@ -222,7 +221,7 @@ public class WalletFundCommand extends WalletManager implements Runnable {
     }
 
     public String setTokenIfAvailable() {
-        return null;
+        return token == null ? null : token;
     }
 }
 
